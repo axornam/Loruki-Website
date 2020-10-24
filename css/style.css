@@ -1,3 +1,8 @@
+:root {
+    --primary-color: #047aed;
+}
+
+/* Preparations */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -34,16 +39,81 @@ img {
     width: 100%;
 }
 
+
+/* Nav Bar Styling */
 .navbar {
-    background-color: #047aed;
+    background-color: var(--primary-color);
     color: #ffffff;
     height: 70px;
 }
 
+.navbar ul {
+    display: flex;
+}
+.navbar a {
+    color: #ffffff;
+    padding: 10px;
+    margin: 0 5px;
+}
+
+.navbar a:hover {
+    border-bottom: 2px #ffffff solid;
+}
 .navbar .flex {
     justify-content: space-between;
 }
 
+/* Showcase / Hero Section */
+.showcase {
+    background-color: var(--primary-color);
+    height: 400px;
+    color: #ffffff;
+    position: relative;
+}
+
+.showcase h1 {
+    font-size: 40px;
+
+}
+
+.showcase p {
+    margin: 20px 0;
+}
+
+.showcase .grid {
+    overflow: visible;
+    grid-template-columns: 55% 45%;
+    gap: 30px;
+}
+
+.showcase-form{
+    position: relative;
+    top: 60px;
+    height: 350px;
+    width: 400px;
+    padding: 40px;
+    z-index: 100;
+}
+
+.showcase-form .form-control {
+    margin: 30px 0;
+}
+
+.showcase-form input[type="text"],
+.showcase-form input[type="email"] {
+    border: 0;
+    border-bottom: 1px solid #b4becb;
+    width: 100%;
+    padding: 3px;
+    font-size: 16px;
+    margin: 0 2px;
+}
+
+.showcase-form input:focus {
+    outline: none;
+}
+
+/* Utility Styles */
 .container {
     max-width: 1100px;
     margin: 0 auto;
@@ -56,4 +126,41 @@ img {
     justify-content: center;
     align-items: center;
     height: 100%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+    height: 100%;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 10px;
+    color: #333;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 30px;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 1px solid #ffffff;
+}
+
+
+.btn:hover {
+    transform: scale(0.98);
 }
